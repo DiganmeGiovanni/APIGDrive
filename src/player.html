@@ -1,0 +1,40 @@
+<!--
+    La siguiente pagina permite reproducir pistas musicales
+    almacenadas en GDrive, implementa un mecanismo de playlist
+    muy simple... Enjoy the sounds :)
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reproduciendo pistas musicales desde GDrive</title>
+    <meta charset="UTF-8">
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+</head>
+<body>
+    
+    <h1>Cloud Noises!</h1>
+    <h3>Reproduce tu musica de Skydrive, Google Drive, Dropbox y mas</h3>
+    
+    <button id="iniciar-sesion" onclick="loginUser()">Iniciar sesion</button>
+    
+    
+    <br><br>
+    <div id="toolbar">
+        <button onclick="agregarFolder()">Agregar folder a la lista</button>
+        <button onclick="agregarArchivos()">Agregar un archivo a la lista</button>
+        <audio id="audio-player" controls onended="nextSong()" src="https://docs.google.com/uc?id=0B09INxVJ8XKMd2pKaXg3RGExdjg&export=download"> <!--"http://tptsxa.bn1304.livefilestore.com/y2mI7ma8LgPMyZc0tgamJXFDoPy0JKXIt03PSfySftyIssp8P1MIBbHLxT4le-6ePXzHYk8sUySWLTekQzW4uKj2rVQomyfmrwRLfPstyzsVEE/02%20A%20la%20primera%20persona.mp3?psid=1"-->
+            Tu browser no soporta audio.
+        </audio>
+        <button id="next-song" onclick="nextSong()">Siguiente</button>
+        <button id="prev-song" onclick="prevSong()">Anterior</button>
+    </div>
+    
+    <div id="playlist" style="background: #F8F8F8">
+        <br><br>
+    </div>
+</body>
+</html>
