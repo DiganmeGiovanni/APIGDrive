@@ -1,0 +1,35 @@
+<!--
+    La siguiente pagina muestra de manera sencilla
+    como hacer login para un usuario mediante
+    su cuenta Google y leer informacion sobre sus archivos en Drive.
+    Hacer uploads y downloads de los archivos.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leyendo informacion sobre los archivos de un usuario de Drive</title>
+    <meta charset="UTF-8">
+    
+    <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+    <script type="text/javascript" src="js/readingFilesInfo.js"></script>
+</head>
+<body>
+    <h1>Bienvenido, juguemos un poco con las APIs de Google.</h1>
+    <h4>Bien, lo primero es iniciar una sesion:</h4>
+    
+    <button onclick="loginUser()">Iniciar sesion</button>
+    <button onclick="closeSession()">Cerrar sesion</button>
+    
+    <br /><br /><br />
+    <a href="javascript: void(0);" onclick="pickupFile()">
+        Mostrar metadatos sobre un archivo de mi Drive
+    </a><br />
+    <a href="javascript: void(0);" onclick="pickupFolder();">
+        Mostrar informacion sobre un folder de mi Drive
+    </a><br /><br />
+    <a href="javascript: void(0);" onclick="searchForAudio();">
+        Mostrar los archivos de audio de un folder
+    </a>
+</body>
+</html>
